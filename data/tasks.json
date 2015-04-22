@@ -1,0 +1,74 @@
+[
+  {
+    "title"  : "Task 1: Determine your Stores",
+    "description" : "<div>What are the different domains we have in this super complicated world improving single-page application?</div>",
+    "id": 0
+  },
+  {
+    "title"  : "Task 2: Determine your Components",
+    "description" : "<div>What are the different Components this application is built of?</div><div>Remember, the more Components, the better because the more we can reuse.</div>",
+    "id": 1
+  },
+  {
+    "title"  : "Task 3: Determine your State",
+    "description" : "<div>Which Component will contain State? i.e. which Component will listen to which Store(s) and propagate changes down to its children using props? These are some tips that might help you figure this out:<div><ul><li>Is it passed in from a parent via props? If so, it probably isn't state.</li><li>Does it change over time? If not, it probably isn't state.</li><li>Can you compute it based on any other state or props in your component? If so, it's not state.</li></ul>",
+    "id": 2
+  },
+  {
+    "title"  : "Task 4: Download the Project",
+    "description": "<div><ul><li> <p> Clone the <a href='https://github.com/ticup/jsconfbe2015'>Project</a>, either by downloading it <a href='https://github.com/ticup/jsconfbe2015/archive/master.zip'> here </a> or by cloning it with</p><p> git clone https://github.com/ticup/jsconfbe2015.git</p></li></div>",
+    "id": 3
+  },
+
+  {
+    "title"  : "Task 5: Get familiar with the Project",
+    "description": "<div>The project has the following structure: </div> <ul><li class='mute'>/bin : some scripts <ul><li>/www : this starts the web server</li> <li  class='mute'>/reset : this resets the data (needs a server restart to take effect)</li></ul></li><li class='mute'>/data: the data of the server (not important)</li><li  class='mute'>/node_modules : the node modules we depend on (not important)</li><li>/public : the client-side code, <b>this is the folder you'll be working in!</b><ul><li  class='mute'>/common : files shared by both versions, such as css files and js library files. (not important)</li> <li>/pure : a working version of the application using pure html and javascript without React.</li><li>/react : skeleton code for the react + flux architecture</li></ul></li><li class='mute'>/routes : the web server code (not important)</li> <li class='mute'> /app.js : main code for the web server</li> <li class='mute'> /package.json : all the meta information on this project <br />+ some scripts to build your jsx files into js files conveniently</li></ul> <p> Your goal will be to take the working code from the /public/pure client and mould it into /public/react such that the app is now written using react+flux.",
+    "id": 4
+  },
+  {
+    "title"  : "Task 6: Run the Web Server",
+    "description": "<div> <p> Run: <code>node bin/www</code> to start the web server. </p> <p> Visit <a href='http://localhost:3000/pure'>http://localhost:3000/pure</a> to visit the 'pure' client and </p> <p> <a href='http://localhost:3000/react'>http://localhost:3000/react</a> to visit the 'react' client (they both talk to the same server). </p> <p> The pure client should work, but it's normal that the react client's page is empty. It's your job to make this thing work! :)</p></div>",
+    "id": 5
+  },
+  {
+    "title"  : "Task 7: Run the JSX Compiler using watchify",
+    "description": "<div>Next, you need to run the module 'watchify', which will transform your JSX files into regular javascript whenever you change (or create) a JSX file in public/react/components. Besides that it will also use browserify to transform the node.js require module style to a single file that we can run in the browser. Thi is the   I have set up this up for you, so all you have to do is run: <code> npm run start</code></div>",
+    "id": 6
+  },
+  {
+    "title"  : "Task 8: Get Programming!",
+    "description": "<div>Your job is now to use the code that is in /public/pure and mould it in a React + Flux architecture in /public/react, where I have set up all of the boilerplate code for you.</div>",
+    "id": 7
+  },
+  {
+    "title"  : "Task 9: A Static Page with Props",
+    "description": "<div>To get your fingers wet with React, let's start by <emph>reactifying</emph> the whole page, but without using state.<ul><li>This means we just recreate the static structure using the html of the pure client, but by putting it in Components and rendering the Component tree.</li><li> Use <b>props</b> whenever you can to make the Components more reusable. For example, the title in the header is definitely something you can pass in with props. </li><li> Wherever you normally are going to use state in a component, just temporarily plug in some static stubs. We've provided these stubs in public/react/js/stubs.js for your convenience. </li></div>",
+    "id": 8
+  },
+  {
+    "title"  : "Task 10: The protocol",
+    "description": "<div>Ok, if you now visit the react client you should see the same page as the pure page, although it doesn't have any functionality yet. It's now time to add in the actual data of the server. Before you can do this, here's how the protocol between the server and client looks like: <ul><li>The server sends to the client: an array of all tasks and an array of all questions, in that order. Look at the respective file in the pure code for the exact protocol.</li><li>The server can send additional (new) questions while running, it does this per question.</li><li>The client can create new question.</li></ul> Have a look at the public/pure/js/tasks.js public/pure/js/questions.js for the specifics of the protocol.</div>",
+    "id": 9
+  },
+  {
+    "title"  : "Task 11: A Dynamic Page with State Updated by the Server",
+    "description": "<div>Load in the dynamic content of the server by implementing the previously described protocol in the react+flux architecture. This means that:<ul><li> Incoming messages from the server need to be translated into actions by the <b>utils/WebAPI.js</b>, which means you need to do the following for each action:<ul><li> Add an ActionType in constants/AppConstants </li><li>Add an action creator in actions/ActionCreator.js</li><li>Change your data appropriately in the stores whenever a relevant action occurs and emit the change event on the store.</li></ul></li> <li> Add state to the appropriate component(s) </li> <li> Attach a change listener to the relevant store and update the state whenever the store changes. </li> </ul></div>",
+    "id": 10
+  },
+  {
+    "title"  : "Task 12: Asking questions",
+    "description": "<div>Now you should actually see these tasks and questions will be updated in real-time (you can test this by asking a question using the pure client). Next step is to enable the asking of questions. In order to do so: <ul> <li>Add an onSubmit listener to the question form </li><li>Trigger an action to create a question with the appropriate data retrieved from the form using an action creator and send the request to the server using the WebAPIUtils.</li></ul></div>",
+    "id": 11
+  },
+  {
+    "title"  : "Task 13: Filtering",
+    "description": "<div>So now you receive data from the server in real-time and you can post questions. The last thing to do is the filtering:<ul><li> Make sure that the text you type in the task filter input does the actual filtering on the tasks.</li><li> Make sure that if the 'Hide Questions' checkbox is checked, that the questions are hidden. </li></ul> </div>",
+    "id": 12
+  },
+  {
+    "title"  : "Task 14: Profit",
+    "description": "<div>You completely fluxireactified the hell out of this application. Cool man!</div>",
+    "id": 12
+  }
+
+]

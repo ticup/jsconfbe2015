@@ -1,0 +1,34 @@
+{
+  "name": "ReactShop",
+  "version": "0.0.1",
+  "main": "lib/app.js",
+  "private": true,
+  "scripts": {
+    "start": "watchify -o public/react/js/bundle.js -v -d public/react/js/app.js",
+    "build": "browserify . -t | uglifyjs -cm > js/bundle.min.js"
+  },
+  "dependencies": {
+    "react": "~0.13",
+    "flux": "^2.0.1",
+    "debug": "~2.1.1",
+    "express": "~4.12.2",
+    "serve-favicon": "~2.2.0",
+    "socket.io": "~1.3.5",
+    "socket.io-client": "~1.3.5",
+    "object-assign": "~2.0.0"
+  },
+  "devDependencies": {
+    "jsxc": "~0.1.6",
+    "browserify": "^6.2.0",
+    "watchify": "^2.1.1",
+    "reactify": "^0.15.2"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "author": "Tim Coppieters",
+  "license": "Apache 2"
+}
+

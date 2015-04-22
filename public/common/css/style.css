@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.right.aligned {
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+}
+
+
+#app {
+  display: none;
+}
+
+.segment.title {
+  color: grey;
+}
+
+
+
+.ui.accordion .title {
+  margin-top: 20px;
+}
+
+.hide { display: none !important; }
+
+.mute { color: grey; }

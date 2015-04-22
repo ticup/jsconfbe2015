@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+
+
+  <head>
+    <title> Reactive Workshop </title>
+    <link rel='stylesheet' href='/common/css/style.css' />
+    <link rel='stylesheet' href='/common/css/semantic/semantic.min.css' />
+
+  </head>
+
+
+
+  <body>
+
+
+  <div class="ui one column page centered stackable grid">
+    <div class="row">
+      <div class="column thirteen wide ui segment">
+
+
+
+
+        <!-- Header --->
+        <h1 class="ui dividing header">
+             <img src="/common/images/jsconflogo.png">
+             <img src="/common/images/reactlogo.svg">
+
+              <div class="content">
+                React + Flux Workshop
+                <div class="sub header"> JSConfBe </div>
+              </div>
+          </h1>
+        <!-- /Header -->
+
+
+        <div class="ui hidden divider"></div>
+
+
+        <!-- Content -->
+        <div class="content ui left aligned">
+
+
+          <!-- Options -->
+          <div class="ui form">
+            <div class="three fields">
+                <div class="inline field">
+                  <div class="user ui text input">
+                    <input id="usernameInput" type="text" placeholder="Enter Your Name..." />
+                  </div>
+                </div>
+
+                <div class="inline field">
+                  <div class="ui left icon input">
+                    <i class="search icon"></i>
+                    <input id="taskSearchInput" type="text" placeholder="Search Tasks...">
+                  </div>
+                </div>
+
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input id="showQuestionsCheckbox" type="checkbox">
+                    <label>
+                      Hide Questions
+                    </label>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- /Options -->
+
+
+          <div class="ui hidden divider"></div>
+
+
+          <!-- MainContent -->
+          <p class="segment title">First one to finish this page in proper React + Flux style gets a price (and obviously fame)!</p>
+
+          <div id="taskList"></div>
+          <!-- /MainContent -->
+
+
+        </div>
+        <!-- Content -->
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/common/js/lib/jquery.min.js"></script>
+  <script src="/common/js/lib/flux.js"></script>
+  <script src="/common/js/lib/semantic.min.js"></script>
+  <script src="js/bundle.js"></script>
+
+  </body>
+</html>

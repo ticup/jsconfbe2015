@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/javascripts/bundle.js' from '/Users/ticup/Documents/workspaceNode/ReactShop/react'");
