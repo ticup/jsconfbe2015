@@ -1,5 +1,5 @@
 {
-  tasks: [
+  "tasks": [
     {
     "title"  : "Task 1: Determine your Stores",
     "description" : "<div>What are the different domains we have in this super complicated world improving single-page application?</div>",
@@ -22,7 +22,7 @@
     }
   ],
 
-  questions: [
+  "questions": [
     {
       "author": "John",
       "text": "Is 42 the answer?",
@@ -40,5 +40,6 @@
       "text": "When do we get cookies?",
       "taskId": 1,
       "id": 2
+    }
   ]
 }
