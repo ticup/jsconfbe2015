@@ -3,9 +3,9 @@ Code for the JSConfBE 2015 React + Flux workshop.
 
 ## Install
 * Install [node.js](https://nodejs.org/).
-* Clone this project:
+* Clone this project (through git or by downloading the zip from this page):
 
-```` git clone https://github.com/ticup/jsconfbe2015.git````
+```` $ git clone https://github.com/ticup/jsconfbe2015.git````
 
 * go to dir:
 
