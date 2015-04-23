@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "watchify -o public/react/js/bundle.js -v -d public/react/js/app.js",
+    "pure" : "watchify -o public/pure/js/bundle.js -v -d public/pure/js/app.js",
     "build": "browserify . -t | uglifyjs -cm > js/bundle.min.js"
   },
   "dependencies": {

@@ -1,0 +1,44 @@
+{
+  tasks: [
+    {
+    "title"  : "Task 1: Determine your Stores",
+    "description" : "<div>What are the different domains we have in this super complicated world improving single-page application?</div>",
+    "id": 0
+    },
+    {
+    "title"  : "Task 2: Determine your Components",
+    "description" : "<div>What are the different Components this application is built of?</div><div>Remember, the more Components, the better because the more we can reuse.</div>",
+    "id": 1
+    },
+    {
+    "title"  : "Task 3: Determine your State",
+    "description" : "<div>Which Component will contain State? i.e. which Component will listen to which Store(s) and propagate changes down to its children using props? These are some tips that might help you figure this out:<div><ul><li>Is it passed in from a parent via props? If so, it probably isn't state.</li><li>Does it change over time? If not, it probably isn't state.</li><li>Can you compute it based on any other state or props in your component? If so, it's not state.</li></ul>",
+    "id": 2
+    },
+    {
+    "title"  : "Task 4: Download the Project",
+    "description": "<div><ul><li> <p> Clone the <a href='https://github.com/ticup/jsconfbe2015'>Project</a>, either by downloading it <a href='https://github.com/ticup/jsconfbe2015/archive/master.zip'> here </a> or by cloning it with</p><p> git clone https://github.com/ticup/jsconfbe2015.git</p></li></div>",
+    "id": 3
+    }
+  ],
+
+  questions: [
+    {
+      "author": "John",
+      "text": "Is 42 the answer?",
+      "taskId": 0,
+      "id": 0
+    },
+    {
+      "author": "Alice",
+      "text": "Do mice rule the world?",
+      "taskId": 0,
+      "id": 1
+    },
+    {
+      "author": "John",
+      "text": "When do we get cookies?",
+      "taskId": 1,
+      "id": 2
+  ]
+}

@@ -27,7 +27,7 @@ function showQuestions() {
 }
 
 function showQuestion(question) {
-    $('<li><p>' + (question.author ? question.author : 'Anonymous') + ': ' + question.text + '</p></li>')
+    $('<div class="item"><i class="star icon"></i><div class="content">' + (question.author ? question.author : 'Anonymous') + ': ' + question.text + '</div></div>')
         .appendTo($(require('./tasks').getTaskQuestionsDOMId(question.taskId)));
 }
 

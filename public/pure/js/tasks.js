@@ -1,13 +1,12 @@
 var comm      = require('./comm');
 var Questions = require('./questions');
-var Answers   = require('./answers');
 
 /*
     DOM ids
  */
-var CONTAINER_ID = '#taskList';
-var TASK_SEARCH_ID    = '#taskSearchInput';
-var SHOW_QUESTIONS_ID = '#showQuestionsCheckbox';
+var CONTAINER_ID        = '#taskList';
+var TASK_SEARCH_ID      = '#taskSearchInput';
+var SHOW_QUESTIONS_ID   = '#showQuestionsCheckbox';
 var QUESTIONS_CONTAINER = '.questionsContainer';
 
 /*
@@ -52,12 +51,9 @@ function addTask(task) {
 
                 '<div class="questionsContainer">' +
                 '<a class="ui ribbon label"> Questions </a>' +
-                '<ul class="questions ui list"></ul>' +
+                '<div class="questions ui very relaxed list"></div>' +
                 '<div class="ui divider"></div>' +
                 '</div>' +
-
-                //'<a class="ui ribbon label"> Answers </a>' +
-                //'<ul class="answers ui list"></ul>' +
 
             '</div>' +
         '</div>')
