@@ -1,0 +1,22 @@
+{
+  questions: [
+    {
+      "author": "John",
+      "text": "Is 42 the answer?",
+      "taskId": 0,
+      "id": 0
+    },
+    {
+      "author": "Alice",
+      "text": "Do mice rule the world?",
+      "taskId": 0,
+      "id": 1
+    },
+    {
+      "author": "John",
+      "text": "When do we get cookies?",
+      "taskId": 1,
+      "id": 2
+    }
+  ]
+}

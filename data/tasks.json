@@ -11,7 +11,7 @@
   },
   {
     "title"  : "Task 3: Determine your State",
-    "description" : "<div>Which Component will contain State? i.e. which Component will listen to which Store(s) and propagate changes down to its children using props? These are some tips that might help you figure this out:<div><ul><li>Is it passed in from a parent via props? If so, it probably isn't state.</li><li>Does it change over time? If not, it probably isn't state.</li><li>Can you compute it based on any other state or props in your component? If so, it's not state.</li></ul>",
+    "description" : "<div>Which Component will contain State? i.e. which Component will listen to which Store(s) and propagate changes down to its children using props? These are some tips that might help you figure this out:</div><ul><li>Is it passed in from a parent via props? If so, it probably isn't state.</li><li>Does it change over time? If not, it probably isn't state.</li><li>Can you compute it based on any other state or props in your component? If so, it's not state.</li></ul>",
     "id": 2
   },
   {
